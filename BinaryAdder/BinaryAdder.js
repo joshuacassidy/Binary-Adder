@@ -24,11 +24,11 @@ ConvertToNumber(x,y);
 function Add(x,y,z){
   for(var i = 0; i < 8;i++){
     z[i+1] = x[i] && z[i] || x[i] && y[i] || y[i] && z[i] || x[i] && y[i] && z[i];
-   [i]= x[i] && !y[i] && !z[i] || !x[i] && y[i] && !z[i] || !x[i] && !y[i] && z[i] || x[i] && y[i] && z[i];  z 
+    z[i]= x[i] && !y[i] && !z[i] || !x[i] && y[i] && !z[i] || !x[i] && !y[i] && z[i] || x[i] && y[i] && z[i];  
     z[i] === true  ? z[i] = 1 : z[i];  
   }
   z = z.reverse().join("");
   alert(z);
 }
 Add(x,y,z);
-})(parseInt(prompt("First Number?")),parseInt(prompt("Second Number")),[]);
+})(parseInt(prompt("num?")),parseInt(prompt("num?")),[]);
