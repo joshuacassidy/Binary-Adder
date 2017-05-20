@@ -23,8 +23,11 @@ ConvertToNumber(x,y);
 
 function Add(x,y,z){
   for(var i = 0; i < 8;i++){
+    //Most Significant Digit
     z[i+1] = x[i] && z[i] || x[i] && y[i] || y[i] && z[i] || x[i] && y[i] && z[i];
-    z[i]= x[i] && !y[i] && !z[i] || !x[i] && y[i] && !z[i] || !x[i] && !y[i] && z[i] || x[i] && y[i] && z[i];  
+    //Least Significant Digit
+    z[i]= x[i] && !y[i] && !z[i] || !x[i] && y[i] && !z[i] || !x[i] && !y[i] && z[i] || x[i] && y[i] && z[i];
+    //Converting True value back to Binary  
     z[i] === true  ? z[i] = 1 : z[i];  
   }
   z = z.reverse().join("");
